@@ -1,0 +1,2931 @@
+uims:
+  ROLE_ADMIN:
+    menu:
+      - label: 学生信息
+        subMenu:
+          - name: StudentInit1
+            label: 学生管理
+      - label: 学习管理
+        subMenu:
+          - name: CourseInit
+            label: 课程管理
+          - name: MaterialInit1
+            label: 资料管理
+          - name: CheckLogInit1
+            label: 考勤管理
+          - name: HomeworkInit1
+            label: 作业管理
+          - name: ScoreLogInit1
+            label: 成绩管理
+      - label: 实践管理
+        subMenu:
+          - name: AchievementCategoryInit
+            label: 科技成果管理
+          - name: CommunityCategoryInit
+            label: 社会实践管理
+          - name: CompetitionInit
+            label: 学科竞赛管理
+          - name: LectureInit
+            label: 培训讲座管理
+      - label: 学生荣誉
+        subMenu:
+          - name: HonorCategoryInit
+            label: 荣誉信息管理
+      - label: 日常管理
+        subMenu:
+          - name: ActivityCategoryInit
+            label: 日常活动管理
+          - name: LeaveCategoryInit
+            label: 请假信息管理
+          - name: ConsumeCategoryInit
+            label: 消费日志管理
+    page:
+      #学生管理
+      - name: StudentInit1
+        title: 学生管理
+        url: information/studentInf/init
+        type: table
+        item:
+          - type: text
+            prop: studentNum
+            label: 学号
+          - type: textPage
+            prop: studentName
+            label: 姓名
+            page: IntroduceInit
+          - type: text
+            prop: sex
+            label: 性别
+          - type: text
+            prop: age
+            label: 年龄
+          - type: date
+            prop: birthday
+            label: 出生日期
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: StudentInit2
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入学号或姓名
+            field:
+              - studentNum
+              - studentName
+            url: information/studentInf/query
+      #管理选项
+      - name: StudentInit2
+        title: 管理选项
+        type: menu
+        item:
+          - label: 个人信息
+            page: StudentEdit
+          - label: 选课信息
+            page: CourseLogInit
+          - label: 考勤信息
+            page: CheckLogInit2
+          - label: 作业信息
+            page: HomeworkLogInit1
+          - label: 成绩信息
+            page: ScoreLogInit2
+          - label: 科技成果
+            page: AchievementInit
+          - label: 社会实践
+            page: CommunityInit
+          - label: 学科竞赛
+            page: CompetitionLogInit
+          - label: 创新项目
+            page: InnovationInit
+          - label: 培训讲座
+            page: LectureLogInit
+          - label: 校外实习
+            page: PracticeInit
+          - label: 荣誉信息
+            page: HonorInit
+          - label: 日常活动
+            page: ActivityInit
+          - label: 请假信息
+            page: LeaveInit
+          - label: 消费日志
+            page: ConsumeInit
+      #学生个人信息管理
+      - name: StudentEdit
+        title: 学生个人信息
+        type: form
+        url: information/studentInf/editInit
+        field: studentInfId
+        submitUrl: information/studentInf/editSubmit
+        item:
+          - type: input
+            prop: studentNum
+            label: 学号
+          - type: input
+            prop: studentName
+            label: 姓名
+            disabled: 1
+          - type: select
+            prop: sex
+            label: 性别
+            option:
+              - value: 男
+                label: 男
+              - value: 女
+                label: 女
+            disabled: 1
+          - type: input
+            prop: age
+            label: 年龄
+            disabled: 1
+          - type: date
+            prop: birthday
+            label: 出生日期
+            disabled: 1
+          - type: input
+            prop: phone
+            label: 联系方式
+            disabled: 1
+          - type: input
+            prop: email
+            label: 电子邮箱
+            disabled: 1
+          - type: input
+            prop: address
+            label: 住址
+            disabled: 1
+          - type: input
+            prop: nation
+            label: 民族
+            disabled: 1
+          - type: input
+            prop: IDCard
+            label: 身份证号
+            disabled: 1
+          - type: select
+            prop: politicalStatus
+            label: 政治面貌
+            option:
+              - value: 中共党员
+                label: 中共党员
+              - value: 中共预备党员
+                label: 中共预备党员
+              - value: 共青团员
+                label: 共青团员
+              - value: 民革党员
+                label: 民革党员
+              - value: 民盟盟员
+                label: 民盟盟员
+              - value: 民建会员
+                label: 民建会员
+              - value: 民进会员
+                label: 民进会员
+              - value: 农工党党员
+                label: 农工党党员
+              - value: 致公党党员
+                label: 致公党党员
+              - value: 九三学社社员
+                label: 九三学社社员
+              - value: 台盟盟员
+                label: 台盟盟员
+              - value: 无党派人士
+                label: 无党派人士
+              - value: 群众
+                label: 群众
+            disabled: 1
+      #学生选课信息
+      - name: CourseLogInit
+        title: 学生选课信息
+        type: table
+        url: study/courseLog/init
+        field: studentId
+        item:
+          - type: text
+            prop: courseNum
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: coursePoint
+            label: 学分
+          - type: text
+            prop: coursePeriod
+            label: 学时
+          - type: text
+            prop: courseTeacher
+            label: 授课教师
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课程号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #科技成果
+      - name: AchievementInit
+        title: 科技成果
+        type: table
+        url: experience/achievement/init
+        field: studentId
+        item:
+          - type: text
+            prop: achievementName
+            label: 科技成果名
+          - type: date
+            prop: achievementDate
+            label: 科技成果日期
+          - type: text
+            prop: achievementDetail
+            label: 科技成果详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: AchievementDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入科技成果名
+            field:
+              - achievementName
+            url: experience/achievement/query
+      #科技成果详情
+      - name: AchievementDetail
+        title: 科技成果详情
+        type: form
+        url: experience/achievement/editInit
+        disabled: 1
+        backButton: 1
+        item:
+          - type: input
+            prop: achievementName
+            label: 科技成果名
+          - type: date
+            prop: achievementDate
+            label: 科技成果日期
+          - type: input
+            prop: achievementDetail
+            label: 科技成果详情
+      #社会实践
+      - name: CommunityInit
+        title: 社会实践
+        type: table
+        url: experience/community/init
+        field: studentId
+        item:
+          - type: text
+            prop: communityName
+            label: 社会实践名
+          - type: text
+            prop: communityCategoryName
+            label: 社会实践类型
+          - type: date
+            prop: communityDate
+            label: 社会实践日期
+          - type: text
+            prop: communityDetail
+            label: 社会实践详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: CommunityDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入社会实践名或实践类别
+            field:
+              - communityName
+              - communityCategoryName
+            url: experience/community/query
+      #社会实践详情
+      - name: CommunityDetail
+        title: 社会实践详情
+        type: form
+        url: experience/community/editInit
+        disabled: 1
+        backButton: 1
+        item:
+          - type: input
+            prop: communityName
+            label: 社会实践名
+          - type: dynamicSelect
+            prop: communityCategoryId
+            label: 社会实践类型
+            table: CommunityCategory
+            optionLabel: communityCategoryName
+          - type: date
+            prop: communityDate
+            label: 社会实践日期
+          - type: input
+            prop: communityDetail
+            label: 社会实践详情
+      #学科竞赛
+      - name: CompetitionLogInit
+        title: 学科竞赛
+        type: table
+        url: experience/competitionLog/init
+        field: studentId
+        item:
+          - type: text
+            prop: competitionNum
+            label: 学科竞赛编号
+          - type: text
+            prop: competitionName
+            label: 学科竞赛名
+          - type: date
+            prop: competitionDate
+            label: 学科竞赛日期
+          - type: text
+            prop: competitionLogResult
+            label: 学科竞赛结果
+          - type: text
+            prop: competitionLogDetail
+            label: 学科竞赛详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: CompetitionLogDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入学科竞赛编号或学科竞赛名
+            field:
+              - competitionNum
+              - competitionName
+            url: experience/competitionLog/query
+      #学科竞赛详情
+      - name: CompetitionLogDetail
+        title: 学科竞赛详情
+        type: form
+        url: experience/competitionLog/editInit
+        disabled: 1
+        backButton: 1
+        item:
+          - type: dynamicSelect
+            prop: competitionId
+            label: 学科竞赛名
+            table: Competition
+            optionLabel: competitionName
+          - type: input
+            prop: competitionLogResult
+            label: 学科竞赛结果
+          - type: input
+            prop: competitionLogDetail
+            label: 学科竞赛详情
+      #创新项目
+      - name: InnovationInit
+        title: 创新项目
+        type: table
+        url: experience/innovation/init
+        field: studentId
+        item:
+          - type: text
+            prop: innovationName
+            label: 创新项目名
+          - type: date
+            prop: innovationDate
+            label: 创新项目日期
+          - type: text
+            prop: innovationDetail
+            label: 创新项目详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: InnovationDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入创新项目名
+            field:
+              - innovationName
+            url: experience/innovation/query
+      #创新项目详情
+      - name: InnovationDetail
+        title: 创新项目信息
+        type: form
+        url: experience/innovation/editInit
+        disabled: 1
+        backButton: 1
+        item:
+          - type: input
+            prop: innovationName
+            label: 创新项目名
+          - type: date
+            prop: innovationDate
+            label: 创新项目日期
+          - type: input
+            prop: innovationDetail
+            label: 创新项目详情
+      #培训讲座
+      - name: LectureLogInit
+        title: 培训讲座管理-选择培训讲座
+        type: table
+        url: experience/lectureLog/init
+        field: studentId
+        item:
+          - type: text
+            prop: lectureNum
+            label: 培训讲座编号
+          - type: text
+            prop: lectureName
+            label: 培训讲座名
+          - type: date
+            prop: lectureDate
+            label: 培训讲座日期
+          - type: text
+            prop: lectureLogDetail
+            label: 培训讲座详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: LectureLogDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入培训讲座编号或培训讲座名
+            field:
+              - lectureNum
+              - lectureName
+            url: experience/lectureLog/query
+      #培训讲座详情
+      - name: LectureLogDetail
+        title: 培训讲座信息
+        type: form
+        url: experience/lectureLog/editInit
+        disabled: 1
+        backButton: 1
+        item:
+          - type: dynamicSelect
+            prop: lectureId
+            label: 培训讲座名
+            table: Lecture
+            optionLabel: lectureName
+          - type: input
+            prop: lectureLogDetail
+            label: 培训讲座详情
+      #校外实习
+      - name: PracticeInit
+        title: 校外实习
+        type: table
+        url: experience/practice/init
+        field: studentId
+        item:
+          - type: text
+            prop: practiceName
+            label: 校外实习名
+          - type: date
+            prop: practiceDate
+            label: 校外实习日期
+          - type: text
+            prop: practiceDetail
+            label: 校外实习详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: PracticeDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入校外实习名
+            field:
+              - practiceName
+            url: experience/practice/query
+      #校外实习详情
+      - name: PracticeDetail
+        title: 校外实习详情
+        type: form
+        url: experience/practice/editInit
+        disabled: 1
+        addButton: 1
+        item:
+          - type: input
+            prop: practiceName
+            label: 校外实习名
+          - type: date
+            prop: practiceDate
+            label: 校外实习日期
+          - type: input
+            prop: practiceDetail
+            label: 校外实习详情
+      #荣誉信息
+      - name: HonorInit
+        title: 荣誉信息
+        type: table
+        url: glory/honor/init
+        field: studentId
+        item:
+          - type: text
+            prop: honorName
+            label: 荣誉信息名
+          - type: text
+            prop: honorCategoryName
+            label: 荣誉信息类型
+          - type: text
+            prop: honorDegree
+            label: 荣誉等级
+          - type: date
+            prop: honorDate
+            label: 荣誉信息日期
+          - type: text
+            prop: honorDetail
+            label: 荣誉信息详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: HonorDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入荣誉信息名或荣誉类型
+            field:
+              - honorName
+              - honorCategoryName
+            url: glory/honor/query
+      #荣誉信息详情
+      - name: HonorDetail
+        title: 荣誉信息详情
+        type: form
+        url: glory/honor/editInit
+        disabled: 1
+        backButton: 1
+        item:
+          - type: input
+            prop: honorName
+            label: 荣誉信息名
+          - type: dynamicSelect
+            prop: honorCategoryId
+            label: 荣誉信息类型
+            table: HonorCategory
+            optionLabel: honorCategoryName
+          - type: select
+            prop: honorDegree
+            label: 荣誉等级
+            option:
+              - value: 校级
+                label: 校级
+              - value: 省级
+                label: 省级
+              - value: 国家级
+                label: 国家级
+            disabled: 1
+          - type: date
+            prop: honorDate
+            label: 荣誉信息日期
+          - type: input
+            prop: honorDetail
+            label: 荣誉信息详情
+      #日常活动
+      - name: ActivityInit
+        title: 日常活动
+        type: table
+        url: day/activity/init
+        field: studentId
+        item:
+          - type: text
+            prop: activityName
+            label: 日常活动名
+          - type: text
+            prop: activityCategoryName
+            label: 日常活动类型
+          - type: date
+            prop: activityDate
+            label: 日常活动日期
+          - type: text
+            prop: activityDetail
+            label: 日常活动详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: ActivityDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入日常活动名或荣誉类型
+            field:
+              - activityName
+              - activityCategoryName
+            url: day/activity/query
+      #日常活动详情
+      - name: ActivityDetail
+        title: 日常活动详情
+        type: form
+        url: day/activity/editInit
+        disabled: 1
+        backButton: 1
+        item:
+          - type: input
+            prop: activityName
+            label: 日常活动名
+          - type: dynamicSelect
+            prop: activityCategoryId
+            label: 日常活动类型
+            table: ActivityCategory
+            optionLabel: activityCategoryName
+          - type: date
+            prop: activityDate
+            label: 日常活动日期
+          - type: input
+            prop: activityDetail
+            label: 日常活动详情
+      #请假信息
+      - name: LeaveInit
+        title: 请假信息详情
+        type: table
+        url: day/leave/init
+        field: studentId
+        item:
+          - type: text
+            prop: leaveName
+            label: 请假信息名
+          - type: text
+            prop: leaveCategoryName
+            label: 请假信息类型
+          - type: date
+            prop: leaveDate
+            label: 请假信息日期
+          - type: text
+            prop: leaveDetail
+            label: 请假信息详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: LeaveDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入请假信息名或荣誉类型
+            field:
+              - leaveName
+              - leaveCategoryName
+            url: day/leave/query
+      #请假信息详情
+      - name: LeaveDetail
+        title: 请假信息详情
+        type: form
+        url: day/leave/editInit
+        disabled: 1
+        backButton: 1
+        item:
+          - type: input
+            prop: leaveName
+            label: 请假信息名
+          - type: dynamicSelect
+            prop: leaveCategoryId
+            label: 请假信息类型
+            table: LeaveCategory
+            optionLabel: leaveCategoryName
+          - type: date
+            prop: leaveDate
+            label: 请假信息日期
+          - type: input
+            prop: leaveDetail
+            label: 请假信息详情
+      #消费日志
+      - name: ConsumeInit
+        title: 消费日志
+        type: table
+        url: day/consume/init
+        field: studentId
+        calc:
+          - label: 总金额
+            type: sum
+            prop: consumeAmount
+        item:
+          - type: text
+            prop: consumeName
+            label: 消费日志名
+          - type: text
+            prop: consumeCategoryName
+            label: 消费日志类型
+          - type: date
+            prop: consumeDate
+            label: 消费日志日期
+          - type: text
+            prop: consumeDetail
+            label: 消费日志详情
+          - type: text
+            prop: consumeAmount
+            label: 消费金额
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: ConsumeDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入消费日志名或荣誉类型
+            field:
+              - consumeName
+              - consumeCategoryName
+            url: day/consume/query
+      #消费日志详情
+      - name: ConsumeDetail
+        title: 消费日志详情
+        type: form
+        url: day/consume/editInit
+        disabled: 1
+        backButton: 1
+        item:
+          - type: input
+            prop: consumeName
+            label: 消费日志名
+          - type: dynamicSelect
+            prop: consumeCategoryId
+            label: 消费日志类型
+            table: ConsumeCategory
+            optionLabel: consumeCategoryName
+          - type: date
+            prop: consumeDate
+            label: 消费日志日期
+          - type: input
+            prop: consumeDetail
+            label: 消费日志详情
+          - type: input
+            prop: consumeAmount
+            label: 消费金额
+      #课程管理init
+      - name: CourseInit
+        title: 课程管理
+        type: table
+        url: study/course/init
+        addPage: CourseEdit
+        item:
+          - type: text
+            prop: courseNum
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: coursePoint
+            label: 学分
+          - type: text
+            prop: coursePeriod
+            label: 学时
+          - type: text
+            prop: courseTeacher
+            label: 授课教师
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: CourseEdit
+              - name: delete
+                label: 删除
+                url: study/course/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课序号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #课程管理edit
+      - name: CourseEdit
+        title: 课程信息
+        type: form
+        url: study/course/editInit
+        submitUrl: study/course/editSubmit
+        item:
+          - type: input
+            prop: courseName
+            label: 课程名
+          - type: input
+            prop: courseNum
+            label: 课序号
+          - type: input
+            prop: coursePoint
+            label: 课程学分
+          - type: input
+            prop: coursePeriod
+            label: 课程学时
+          - type: input
+            prop: courseTeacher
+            label: 授课教师
+      #资料管理init1
+      - name: MaterialInit1
+        url: study/course/init
+        type: table
+        title: 资料管理-选择课程
+        item:
+          - type: text
+            prop: courseNum
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: MaterialInit2
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课程号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #资料管理init2
+      - name: MaterialInit2
+        url: study/material/init
+        field: courseId
+        type: table
+        title: 资料管理-选择资料
+        addPage: MaterialEdit
+        item:
+          - type: text
+            prop: materialNum
+            label: 资料编号
+          - type: text
+            prop: materialName
+            label: 资料名
+          - type: text
+            prop: materialCategoryName
+            label: 资料类型
+          - type: text
+            prop: materialDetail
+            label: 资料详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: MaterialEdit
+              - name: delete
+                label: 删除
+                url: study/material/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入资料编号或资料名
+            field:
+              - materialNum
+              - materialName
+            url: study/material/query
+      #资料管理edit
+      - name: MaterialEdit
+        url: study/material/editInit
+        type: form
+        title: 资料信息
+        submitUrl: study/material/editSubmit
+        item:
+          - type: input
+            prop: materialNum
+            label: 资料编号
+          - type: input
+            prop: materialName
+            label: 资料名
+          - type: dynamicSelect
+            prop: materialCategoryId
+            label: 资料类型
+            table: MaterialCategory
+            optionLabel: materialCategoryName
+          - type: input
+            prop: materialDetail
+            label: 资料详情
+      #考勤管理init1
+      - name: CheckLogInit1
+        url: information/student/init
+        type: table
+        title: 考勤管理-选择学生
+        item:
+          - type: text
+            prop: studentNum
+            label: 学号
+          - type: text
+            prop: studentName
+            label: 姓名
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: CheckLogInit2
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入学号或姓名
+            field:
+              - studentNum
+              - studentName
+            url: information/student/query
+      #考勤管理init2
+      - name: CheckLogInit2
+        url: study/courseLog/init
+        field: studentId
+        type: table
+        title: 考勤管理-选择课程
+        item:
+          - type: text
+            prop: courseNum
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: coursePoint
+            label: 学分
+          - type: text
+            prop: coursePeriod
+            label: 学时
+          - type: text
+            prop: courseTeacher
+            label: 授课教师
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: CheckLogInit3
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课序号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #考勤管理init3
+      - name: CheckLogInit3
+        url: study/checkLog/init
+        field: courseLogId
+        type: table
+        title: 考勤管理-选择考勤
+        addPage: CheckLogEdit
+        calc:
+          - label: 总计
+            type: bucket
+            prop: checkLogSituation
+        item:
+          - type: date
+            prop: checkLogDate
+            label: 日期
+          - type: text
+            prop: checkLogDetail
+            label: 考勤信息
+          - type: text
+            prop: checkLogSituation
+            label: 到课情况
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: CheckLogEdit
+              - name: delete
+                label: 删除
+                url: study/checkLog/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入考勤信息
+            field:
+              - checkLogDetail
+            url: study/checkLog/query
+      #考勤管理edit
+      - name: CheckLogEdit
+        url: study/checkLog/editInit
+        type: form
+        title: 考勤信息
+        submitUrl: study/checkLog/editSubmit
+        item:
+          - type: date
+            prop: checkLogDate
+            label: 日期
+          - type: input
+            prop: checkLogDetail
+            label: 考勤信息
+          - type: select
+            prop: checkLogSituation
+            label: 到课情况
+            option:
+              - value: 正常到课
+                label: 正常到课
+              - value: 迟到
+                label: 迟到
+              - value: 早退
+                label: 早退
+              - value: 缺课
+                label: 缺课
+              - value: 请假
+                label: 请假
+      #作业管理init1
+      - name: HomeworkInit1
+        url: study/course/init
+        type: table
+        title: 作业管理-选择课程
+        item:
+          - type: text
+            prop: courseNum
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: HomeworkInit2
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课程号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #作业管理init2
+      - name: HomeworkInit2
+        url: study/homework/init
+        field: courseId
+        type: table
+        title: 作业管理-选择作业
+        addPage: HomeworkEdit
+        item:
+          - type: date
+            prop: homeworkDate
+            label: 日期
+          - type: text
+            prop: homeworkDetail
+            label: 作业信息
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: HomeworkEdit
+              - name: delete
+                label: 删除
+                url: study/homework/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入作业信息
+            field:
+              - homeworkDetail
+            url: study/homework/query
+      #作业管理edit
+      - name: HomeworkEdit
+        url: study/homework/editInit
+        type: form
+        title: 作业信息
+        submitUrl: study/homework/editSubmit
+        item:
+          - type: date
+            prop: homeworkDate
+            label: 日期
+          - type: input
+            prop: homeworkDetail
+            label: 作业信息
+      #作业记录管理init1
+      - name: HomeworkLogInit1
+        url: study/courseLog/init
+        field: studentId
+        type: table
+        title: 作业管理-选择课程
+        item:
+          - type: text
+            prop: courseNum
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: coursePoint
+            label: 学分
+          - type: text
+            prop: coursePeriod
+            label: 学时
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: HomeworkLogInit2
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课序号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #作业记录管理init2
+      - name: HomeworkLogInit2
+        url: study/homeworkLog/init
+        field: courseLogId
+        type: table
+        title: 作业管理-已完成
+        calc:
+          - label: 总计
+            type: bucket
+            prop: homeworkLogStatus
+        item:
+          - type: date
+            prop: homeworkDate
+            label: 日期
+          - type: text
+            prop: homeworkDetail
+            label: 作业信息
+          - type: text
+            prop: homeworkLogStatus
+            label: 作业完成状态
+          - type: text
+            prop: homeworkLogDetail
+            label: 备注
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: HomeworkLogEdit
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入作业信息或作业完成状态
+            field:
+              - homeworkDetail
+              - homeworkLogStatus
+            url: study/homeworkLog/query
+      #作业管理edit
+      - name: HomeworkLogEdit
+        url: study/homeworkLog/editInit
+        type: form
+        title: 作业信息
+        submitUrl: study/homeworkLog/editSubmit
+        item:
+          - type: date
+            prop: homeworkDate
+            label: 日期
+            disabled: 1
+          - type: input
+            prop: homeworkDetail
+            label: 作业信息
+            disabled: 1
+          - type: select
+            prop: homeworkLogStatus
+            label: 作业完成状态
+            option:
+              - value: 待批改
+                label: 待批改
+              - value: 已完成
+                label: 已完成
+          - type: input
+            prop: homeworkLogDetail
+            label: 备注
+            disabled: 1
+      #成绩管理init1
+      - name: ScoreLogInit1
+        url: information/student/init
+        type: table
+        title: 成绩管理-选择学生
+        item:
+          - type: text
+            prop: studentNum
+            label: 学号
+          - type: text
+            prop: studentName
+            label: 姓名
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: ScoreLogInit2
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入学号或姓名
+            field:
+              - studentNum
+              - studentName
+            url: information/student/query
+      #成绩管理init2
+      - name: ScoreLogInit2
+        url: study/courseLog/init
+        field: studentId
+        type: table
+        title: 成绩管理-选择课程
+        item:
+          - type: text
+            prop: courseNum
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: coursePoint
+            label: 学分
+          - type: text
+            prop: coursePeriod
+            label: 学时
+          - type: text
+            prop: courseTeacher
+            label: 授课教师
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: ScoreLogInit3
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课序号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #成绩管理init3
+      - name: ScoreLogInit3
+        url: study/scoreLog/init
+        field: courseLogId
+        type: table
+        title: 成绩管理-选择成绩
+        addPage: ScoreLogEdit
+        item:
+          - type: text
+            prop: scoreLogDetailMedium
+            label: 期中成绩（百分制）
+          - type: text
+            prop: scoreLogDetailFinal
+            label: 期末成绩（百分制）
+          - type: text
+            prop: scoreLogDay
+            label: 平时成绩（百分制）
+          - type: text
+            prop: scoreLogDetail
+            label: 学期绩点（五分制）
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: ScoreLogEdit
+              - name: delete
+                label: 删除
+                url: study/scoreLog/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入成绩信息
+            field:
+              - scoreLogDetail
+            url: study/scoreLog/query
+      #成绩管理edit
+      - name: ScoreLogEdit
+        url: study/scoreLog/editInit
+        type: form
+        title: 成绩记录信息
+        submitUrl: study/scoreLog/editSubmit
+        item:
+          - type: input
+            prop: scoreLogDetailMedium
+            label: 期中成绩（百分制）
+          - type: input
+            prop: scoreLogDetailFinal
+            label: 期末成绩（百分制）
+          - type: input
+            prop: scoreLogDay
+            label: 平时成绩（百分制）
+          - type: input
+            prop: scoreLogDetail
+            label: 学期绩点（五分制）
+      #科技成果类型init
+      - name: AchievementCategoryInit
+        title: 成果类型
+        url: experience/achievementCategory/init
+        type: table
+        addPage: AchievementCategoryEdit
+        item:
+          - type: text
+            prop: achievementCategoryName
+            label: 成果类型名
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: AchievementCategoryEdit
+              - name: delete
+                label: 删除
+                url: experience/achievementCategory/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入成果类型名
+            field:
+              - achievementCategoryName
+            url: experience/achievementCategory/query
+      #科技成果类型edit
+      - name: AchievementCategoryEdit
+        url: experience/achievementCategory/editInit
+        type: form
+        title: 科技成果类型信息
+        submitUrl: experience/achievementCategory/editSubmit
+        item:
+          - type: input
+            prop: achievementCategoryName
+            label: 成果类型名
+      #社会实践类型init
+      - name: CommunityCategoryInit
+        title: 实践类型
+        url: experience/communityCategory/init
+        type: table
+        addPage: CommunityCategoryEdit
+        item:
+          - type: text
+            prop: communityCategoryName
+            label: 实践类型名
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: CommunityCategoryEdit
+              - name: delete
+                label: 删除
+                url: experience/communityCategory/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入实践类型名
+            field:
+              - communityCategoryName
+            url: experience/communityCategory/query
+      #社会实践类型edit
+      - name: CommunityCategoryEdit
+        url: experience/communityCategory/editInit
+        type: form
+        title: 社会实践类型信息
+        submitUrl: experience/communityCategory/editSubmit
+        item:
+          - type: input
+            prop: communityCategoryName
+            label: 实践类型名
+      #学科竞赛init
+      - name: CompetitionInit
+        title: 学科竞赛
+        url: experience/competition/init
+        type: table
+        addPage: CompetitionEdit
+        item:
+          - type: text
+            prop: competitionName
+            label: 竞赛名
+          - type: date
+            prop: competitionDate
+            label: 竞赛时间
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: CompetitionEdit
+              - name: delete
+                label: 删除
+                url: experience/competition/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入实竞赛名
+            field:
+              - competitionName
+            url: experience/competition/query
+      #学科竞赛edit
+      - name: CompetitionEdit
+        url: experience/competition/editInit
+        type: form
+        title: 学科竞赛信息
+        submitUrl: experience/competition/editSubmit
+        item:
+          - type: input
+            prop: competitionName
+            label: 竞赛名
+          - type: date
+            prop: competitionDate
+            label: 竞赛时间
+      #培训讲座init
+      - name: LectureInit
+        title: 培训讲座
+        url: experience/lecture/init
+        type: table
+        addPage: LectureEdit
+        item:
+          - type: text
+            prop: lectureName
+            label: 讲座名
+          - type: date
+            prop: lectureDate
+            label: 讲座时间
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: LectureEdit
+              - name: delete
+                label: 删除
+                url: experience/lecture/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入实竞赛名
+            field:
+              - lectureName
+            url: experience/lecture/query
+      #培训讲座edit
+      - name: LectureEdit
+        url: experience/lecture/editInit
+        type: form
+        title: 培训讲座信息
+        submitUrl: experience/lecture/editSubmit
+        item:
+          - type: input
+            prop: lectureName
+            label: 讲座名
+          - type: date
+            prop: lectureDate
+            label: 讲座时间
+      #荣誉类型init
+      - name: HonorCategoryInit
+        title: 荣誉类型
+        url: glory/honorCategory/init
+        type: table
+        addPage: HonorCategoryEdit
+        item:
+          - type: text
+            prop: honorCategoryName
+            label: 荣誉类型名
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: HonorCategoryEdit
+              - name: delete
+                label: 删除
+                url: glory/honorCategory/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入荣誉类型名
+            field:
+              - honorCategoryName
+            url: glory/honorCategory/query
+      #荣誉类型edit
+      - name: HonorCategoryEdit
+        url: glory/honorCategory/editInit
+        type: form
+        title: 荣誉类型信息
+        submitUrl: glory/honorCategory/editSubmit
+        item:
+          - type: input
+            prop: honorCategoryName
+            label: 荣誉类型名
+          - type: input
+            prop: honorCategoryName
+            label: 荣誉类型名
+      #活动类型init
+      - name: ActivityCategoryInit
+        title: 活动类型
+        url: day/activityCategory/init
+        type: table
+        addPage: ActivityCategoryEdit
+        item:
+          - type: text
+            prop: activityCategoryName
+            label: 活动类型名
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: ActivityCategoryEdit
+              - name: delete
+                label: 删除
+                url: day/activityCategory/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入活动类型名
+            field:
+              - activityCategoryName
+            url: day/activityCategory/query
+      #活动类型edit
+      - name: ActivityCategoryEdit
+        url: day/activityCategory/editInit
+        type: form
+        title: 活动类型信息
+        submitUrl: day/activityCategory/editSubmit
+        item:
+          - type: input
+            prop: activityCategoryName
+            label: 活动类型名
+      #请假类型init
+      - name: LeaveCategoryInit
+        title: 请假类型
+        url: day/leaveCategory/init
+        type: table
+        addPage: LeaveCategoryEdit
+        item:
+          - type: text
+            prop: leaveCategoryName
+            label: 请假类型名
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: LeaveCategoryEdit
+              - name: delete
+                label: 删除
+                url: day/leaveCategory/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入请假类型名
+            field:
+              - leaveCategoryName
+            url: day/leaveCategory/query
+      #请假类型edit
+      - name: LeaveCategoryEdit
+        url: day/leaveCategory/editInit
+        type: form
+        title: 请假类型信息
+        submitUrl: day/leaveCategory/editSubmit
+        item:
+          - type: input
+            prop: leaveCategoryName
+            label: 请假类型名
+      #消费类型init
+      - name: ConsumeCategoryInit
+        title: 消费类型
+        url: day/consumeCategory/init
+        type: table
+        addPage: ConsumeCategoryEdit
+        item:
+          - type: text
+            prop: consumeCategoryName
+            label: 消费类型名
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: ConsumeCategoryEdit
+              - name: delete
+                label: 删除
+                url: day/consumeCategory/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入消费类型名
+            field:
+              - consumeCategoryName
+            url: day/consumeCategory/query
+      #消费类型edit
+      - name: ConsumeCategoryEdit
+        url: day/consumeCategory/editInit
+        type: form
+        title: 消费类型信息
+        submitUrl: day/consumeCategory/editSubmit
+        item:
+          - type: input
+            prop: consumeCategoryName
+            label: 消费类型名
+  ROLE_USER:
+    menu:
+      - label: 信息管理
+        subMenu:
+          - name: StudentEdit
+            label: 个人信息
+          - name: IntroduceInit
+            label: 个人简历
+      - label: 学习管理
+        subMenu:
+          - name: CourseLogInit
+            label: 选课管理
+          - name: MaterialInit1
+            label: 资料管理
+          - name: CheckLogInit1
+            label: 考勤管理
+          - name: HomeworkLogInit1
+            label: 作业管理
+          - name: ScoreLogInit1
+            label: 成绩管理
+      - label: 实践管理
+        subMenu:
+          - name: AchievementInit
+            label: 科技成果管理
+          - name: CommunityInit
+            label: 社会实践管理
+          - name: CompetitionLogInit
+            label: 学科竞赛管理
+          - name: InnovationInit
+            label: 创新项目管理
+          - name: LectureLogInit
+            label: 培训讲座管理
+          - name: PracticeInit
+            label: 校外实习管理
+      - label: 学生荣誉
+        subMenu:
+          - name: HonorInit
+            label: 荣誉信息管理
+      - label: 日常管理
+        subMenu:
+          - name: ActivityInit
+            label: 日常活动管理
+          - name: LeaveInit
+            label: 请假信息管理
+          - name: ConsumeInit
+            label: 消费日志管理
+    page:
+      #简历编辑
+      - name: IntroduceInit
+        type: mixedTable
+        title: 选择简历信息
+        confirmPage: IntroducePreview
+        item:
+          - name: StudentIntroduceInit
+            label: 基本信息
+          - name: CourseLogInit
+            label: 学业信息
+          - name: ScoreLogIntroduceInit
+            label: 学业成绩
+          - name: AchievementInit
+            label: 科技成果
+          - name: CommunityInit
+            label: 实践经历
+          - name: CompetitionLogInit
+            label: 竞赛成果
+          - name: InnovationInit
+            label: 创新项目
+          - name: PracticeInit
+            label: 实习经历
+          - name: HonorInit
+            label: 个人荣誉
+      #简历预览
+      - name: IntroducePreview
+        url: introduce/previewInit
+        type: viewer
+        title: 简历预览
+        submitUrl: introduce/previewInit
+        item:
+          - type: pdfViewr
+            prop: introducePdf
+            label: PDF预览
+      #学生信息管理edit
+      - name: StudentEdit
+        url: information/studentInf/editInit
+        field: studentId
+        type: form
+        title: 学生信息
+        submitUrl: information/studentInf/editSubmit
+        item:
+          - type: input
+            prop: studentNum
+            label: 学号
+            disabled: 1
+          - type: input
+            prop: studentName
+            label: 姓名
+          - type: select
+            prop: sex
+            label: 性别
+            option:
+              - value: 男
+                label: 男
+              - value: 女
+                label: 女
+          - type: input
+            prop: age
+            label: 年龄
+          - type: date
+            prop: birthday
+            label: 出生日期
+          - type: input
+            prop: phone
+            label: 联系方式
+          - type: input
+            prop: email
+            label: 电子邮箱
+          - type: input
+            prop: address
+            label: 住址
+          - type: input
+            prop: nation
+            label: 民族
+          - type: input
+            prop: IDCard
+            label: 身份证号
+          - type: select
+            prop: politicalStatus
+            label: 政治面貌
+            option:
+              - value: 中共党员
+                label: 中共党员
+              - value: 中共预备党员
+                label: 中共预备党员
+              - value: 共青团员
+                label: 共青团员
+              - value: 民革党员
+                label: 民革党员
+              - value: 民盟盟员
+                label: 民盟盟员
+              - value: 民建会员
+                label: 民建会员
+              - value: 民进会员
+                label: 民进会员
+              - value: 农工党党员
+                label: 农工党党员
+              - value: 致公党党员
+                label: 致公党党员
+              - value: 九三学社社员
+                label: 九三学社社员
+              - value: 台盟盟员
+                label: 台盟盟员
+              - value: 无党派人士
+                label: 无党派人士
+              - value: 群众
+                label: 群众
+      #学生信息introduceInit
+      - name: StudentIntroduceInit
+        title: 个人信息
+        type: table
+        url: information/studentInf/init
+        field: studentId
+        item:
+          - type: text
+            prop: studentNum
+            label: 学号
+          - type: text
+            prop: studentName
+            label: 姓名
+          - type: text
+            prop: sex
+            label: 性别
+          - type: text
+            prop: age
+            label: 年龄
+          - type: date
+            prop: birthday
+            label: 出生日期
+          - type: text
+            prop: phone
+            label: 电话
+          - type: text
+            prop: email
+            label: 邮箱
+          - type: text
+            prop: address
+            label: 地址
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入学号或姓名
+            field:
+              - studentNum
+              - studentName
+            url: information/studentInf/query
+      #选课管理init
+      - name: CourseLogInit
+        url: study/courseLog/init
+        field: studentId
+        type: table
+        title: 选课管理-选择课程
+        addPage: CourseLogEdit
+        calc:
+          - label: 总学分
+            type: sum
+            prop: coursePoint
+          - label: 总学时
+            type: sum
+            prop: coursePeriod
+        item:
+          - type: text
+            prop: courseNum
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: coursePoint
+            label: 学分
+          - type: text
+            prop: coursePeriod
+            label: 学时
+          - type: text
+            prop: courseTeacher
+            label: 授课教师
+          - type: opers
+            label: 操作
+            opers:
+              - name: delete
+                label: 退选
+                url: study/courseLog/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课程号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #选课管理edit
+      - name: CourseLogEdit
+        url: study/courseLog/editInit
+        type: table
+        title: 选课信息
+        item:
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: courseNum
+            label: 课序号
+          - type: text
+            prop: coursePoint
+            label: 课程学分
+          - type: text
+            prop: coursePeriod
+            label: 课程学时
+          - type: text
+            prop: courseTeacher
+            label: 授课教师
+          - type: opers
+            label: 操作
+            opers:
+              - name: submit
+                label: 选课
+                url: study/courseLog/editSubmit
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课程号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #资料管理init1
+      - name: MaterialInit1
+        url: study/courseLog/init
+        field: studentId
+        type: table
+        title: 资料管理-选择课程
+        item:
+          - type: text
+            prop: courseName
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: coursePoint
+            label: 学分
+          - type: text
+            prop: coursePeriod
+            label: 学时
+          - type: text
+            prop: courseTeacher
+            label: 授课教师
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: MaterialInit2
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课序号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #资料管理init2
+      - name: MaterialInit2
+        url: study/material/init
+        field: courseId
+        type: table
+        title: 资料管理-选择资料
+        item:
+          - type: text
+            prop: materialNum
+            label: 资料编号
+          - type: text
+            prop: materialName
+            label: 资料名
+          - type: text
+            prop: materialCategoryName
+            label: 资料类型
+          - type: text
+            prop: materialDetail
+            label: 资料详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: MaterialDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入资料信息
+            field:
+              - materialNum
+              - materialName
+            url: study/material/query
+      #资料管理Detail
+      - name: MaterialDetail
+        title: 资料信息
+        url: study/material/editInit
+        type: form
+        disabled: 1
+        backButton: 1
+        item:
+          - type: input
+            prop: materialNum
+            label: 资料编号
+          - type: input
+            prop: materialName
+            label: 资料名
+          - type: input
+            prop: materialCategoryName
+            label: 资料类型
+          - type: input
+            prop: materialDetail
+            label: 资料详情
+      #考勤管理init1
+      - name: CheckLogInit1
+        url: study/courseLog/init
+        field: studentId
+        type: table
+        title: 考勤管理-选择课程
+        item:
+          - type: text
+            prop: courseName
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: coursePoint
+            label: 学分
+          - type: text
+            prop: coursePeriod
+            label: 学时
+          - type: text
+            prop: courseTeacher
+            label: 授课教师
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: CheckLogInit2
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课序号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #考勤管理init2
+      - name: CheckLogInit2
+        url: study/checkLog/init
+        field: courseLogId
+        type: table
+        title: 考勤管理-选择考勤
+        calc:
+          - label: 总计
+            type: bucket
+            prop: checkLogSituation
+        item:
+          - type: date
+            prop: checkLogDate
+            label: 日期
+          - type: text
+            prop: checkLogDetail
+            label: 考勤信息
+          - type: text
+            prop: checkLogSituation
+            label: 到课情况
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: CheckLogDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入考勤信息
+            field:
+              - checkLogDetail
+            url: study/checkLog/query
+      #考勤管理Detail
+      - name: CheckLogDetail
+        title: 考勤信息
+        url: study/checkLog/editInit
+        type: form
+        disabled: 1
+        backButton: 1
+        item:
+          - type: date
+            prop: checkLogDate
+            label: 日期
+          - type: input
+            prop: checkLogDetail
+            label: 考勤信息
+          - type: select
+            prop: checkLogSituation
+            label: 到课情况
+            option:
+              - value: 正常到课
+                label: 正常到课
+              - value: 迟到
+                label: 迟到
+              - value: 早退
+                label: 早退
+              - value: 缺课
+                label: 缺课
+              - value: 请假
+                label: 请假
+      #作业管理init1
+      - name: HomeworkLogInit1
+        url: study/courseLog/init
+        field: studentId
+        type: table
+        title: 作业管理-选择课程
+        item:
+          - type: text
+            prop: courseNum
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: coursePoint
+            label: 学分
+          - type: text
+            prop: coursePeriod
+            label: 学时
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: HomeworkLogInit2
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课序号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #作业管理init2
+      - name: HomeworkLogInit2
+        url: study/homeworkLog/init
+        field: courseLogId
+        type: table
+        title: 作业管理-已完成
+        addPage: HomeworkLogInit3
+        calc:
+          - label: 总计
+            type: bucket
+            prop: homeworkLogStatus
+        item:
+          - type: date
+            prop: homeworkDate
+            label: 日期
+          - type: text
+            prop: homeworkDetail
+            label: 作业信息
+          - type: text
+            prop: homeworkLogStatus
+            label: 作业完成状态
+          - type: text
+            prop: homeworkLogDetail
+            label: 备注
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: HomeworkLogEdit
+              - name: delete
+                label: 删除
+                url: study/homeworkLog/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入作业信息或作业完成状态
+            field:
+              - homeworkDetail
+              - homeworkLogStatus
+            url: study/homeworkLog/query
+      #作业管理Init3
+      - name: HomeworkLogInit3
+        url: study/homeworkLog/selectInit
+        title: 作业管理-未完成
+        type: table
+        item:
+          - type: date
+            prop: homeworkDate
+            label: 日期
+          - type: text
+            prop: homeworkDetail
+            label: 作业信息
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: HomeworkLogEdit
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入作业信息
+            field:
+              - homeworkDetail
+            url: study/homeworkLog/query
+      #作业管理edit
+      - name: HomeworkLogEdit
+        url: study/homeworkLog/editInit
+        type: form
+        title: 作业信息
+        submitUrl: study/homeworkLog/editSubmit
+        item:
+          - type: date
+            prop: homeworkDate
+            label: 日期
+            disabled: 1
+          - type: input
+            prop: homeworkDetail
+            label: 作业信息
+            disabled: 1
+          - type: select
+            prop: homeworkLogStatus
+            label: 作业完成状态
+            option:
+              - value: 待批改
+                label: 待批改
+              - value: 已完成
+                label: 已完成
+          - type: input
+            prop: homeworkLogDetail
+            label: 备注
+      #成绩管理init1
+      - name: ScoreLogInit1
+        url: study/courseLog/init
+        field: studentId
+        type: table
+        title: 成绩管理-选择课程
+        item:
+          - type: text
+            prop: courseNum
+            label: 课序号
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: coursePoint
+            label: 学分
+          - type: text
+            prop: coursePeriod
+            label: 学时
+          - type: text
+            prop: courseTeacher
+            label: 授课教师
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 进入管理
+                page: ScoreLogInit2
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入课序号或课程名
+            field:
+              - courseNum
+              - courseName
+            url: study/courseLog/query
+      #成绩管理init2
+      - name: ScoreLogInit2
+        url: study/scoreLog/init
+        field: courseLogId
+        type: table
+        title: 成绩管理-选择成绩
+        item:
+          - type: text
+            prop: scoreLogDetailMedium
+            label: 期中成绩（百分制）
+          - type: text
+            prop: scoreLogDetailFinal
+            label: 期末成绩（百分制）
+          - type: text
+            prop: scoreLogDay
+            label: 平时成绩（百分制）
+          - type: text
+            prop: scoreLogDetail
+            label: 学期绩点（五分制）
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 详情
+                page: ScoreLogDetail
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入成绩信息
+            field:
+              - scoreLogDetail
+            url: study/scoreLog/query
+      #成绩管理edit
+      - name: ScoreLogDetail
+        title: 成绩记录信息
+        type: form
+        url: study/scoreLog/editInit
+        disabled: 1
+        backButton: 1
+        item:
+          - type: input
+            prop: scoreLogDetailMedium
+            label: 期中成绩（百分制）
+          - type: input
+            prop: scoreLogDetailFinal
+            label: 期末成绩（百分制）
+          - type: input
+            prop: scoreLogDay
+            label: 平时成绩（百分制）
+          - type: input
+            prop: scoreLogDetail
+            label: 学期绩点（五分制）
+      #成绩管理introduceInit
+      - name: ScoreLogIntroduceInit
+        url: study/scoreLog/introduceInit
+        type: table
+        title: 成绩管理-选择成绩
+        calc:
+          - label: 总学分
+            type: sum
+            prop: coursePoint
+          - label: 总绩点
+            type: avg
+            prop: scoreLogDetail
+            weight: coursePoint
+        item:
+          - type: text
+            prop: courseName
+            label: 课程名
+          - type: text
+            prop: scoreLogDetail
+            label: 成绩信息
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入成绩信息
+            field:
+              - scoreLogDetail
+            url: study/scoreLog/query
+      #科技成果管理init
+      - name: AchievementInit
+        url: experience/achievement/init
+        field: studentId
+        type: table
+        title: 科技成果管理-选择科技成果
+        addPage: AchievementEdit
+        item:
+          - type: text
+            prop: achievementName
+            label: 科技成果名
+          - type: text
+            prop: achievementCategoryName
+            label: 科技成果类型
+          - type: date
+            prop: achievementDate
+            label: 科技成果日期
+          - type: text
+            prop: achievementDetail
+            label: 科技成果详情
+          - type: text
+            prop: achievementHonor
+            label: 科技成果荣誉
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: AchievementEdit
+              - name: delete
+                label: 删除
+                url: experience/achievement/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入科技成果名
+            field:
+              - achievementName
+            url: experience/achievement/query
+      #科技成果管理edit
+      - name: AchievementEdit
+        url: experience/achievement/editInit
+        type: form
+        title: 科技成果信息
+        submitUrl: experience/achievement/editSubmit
+        item:
+          - type: input
+            prop: achievementName
+            label: 科技成果名
+          - type: dynamicSelect
+            prop: achievementCategoryId
+            label: 科技成果类型
+            table: AchievementCategory
+            optionLabel: achievementCategoryName
+          - type: date
+            prop: achievementDate
+            label: 科技成果日期
+          - type: input
+            prop: achievementDetail
+            label: 科技成果详情
+          - type: input
+            prop: achievementHonor
+            label: 科技成果荣誉
+      #社会实践管理init
+      - name: CommunityInit
+        url: experience/community/init
+        field: studentId
+        type: table
+        title: 社会实践管理-选择社会实践
+        addPage: CommunityEdit
+        item:
+          - type: text
+            prop: communityName
+            label: 社会实践名
+          - type: text
+            prop: communityCategoryName
+            label: 社会实践类型
+          - type: date
+            prop: communityDate
+            label: 社会实践日期
+          - type: text
+            prop: communityDetail
+            label: 社会实践详情
+          - type: text
+            prop: communityResult
+            label: 社会实践成果
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: CommunityEdit
+              - name: delete
+                label: 删除
+                url: experience/community/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入社会实践名或实践类别
+            field:
+              - communityName
+              - communityCategoryName
+            url: experience/community/query
+      #社会实践管理edit
+      - name: CommunityEdit
+        url: experience/community/editInit
+        type: form
+        title: 社会实践信息
+        submitUrl: experience/community/editSubmit
+        item:
+          - type: input
+            prop: communityName
+            label: 社会实践名
+          - type: dynamicSelect
+            prop: communityCategoryId
+            label: 社会实践类型
+            table: CommunityCategory
+            optionLabel: communityCategoryName
+          - type: date
+            prop: communityDate
+            label: 社会实践日期
+          - type: input
+            prop: communityDetail
+            label: 社会实践详情
+          - type: input
+            prop: communityResult
+            label: 社会实践成果
+      #学科竞赛管理init
+      - name: CompetitionLogInit
+        url: experience/competitionLog/init
+        field: studentId
+        type: table
+        title: 学科竞赛管理-选择学科竞赛
+        addPage: CompetitionLogEdit
+        item:
+          - type: text
+            prop: competitionNum
+            label: 学科竞赛编号
+          - type: text
+            prop: competitionName
+            label: 学科竞赛名
+          - type: date
+            prop: competitionDate
+            label: 学科竞赛日期
+          - type: text
+            prop: competitionLogResult
+            label: 学科竞赛结果
+          - type: text
+            prop: competitionLogDetail
+            label: 学科竞赛详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: CompetitionLogEdit
+              - name: delete
+                label: 删除
+                url: experience/competitionLog/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入学科竞赛编号或学科竞赛名
+            field:
+              - competitionNum
+              - competitionName
+            url: experience/competitionLog/query
+      #学科竞赛管理edit
+      - name: CompetitionLogEdit
+        url: experience/competitionLog/editInit
+        type: form
+        title: 学科竞赛信息
+        submitUrl: experience/competitionLog/editSubmit
+        item:
+          - type: dynamicSelect
+            prop: competitionId
+            label: 学科竞赛名
+            table: Competition
+            optionLabel: competitionName
+          - type: input
+            prop: competitionLogResult
+            label: 学科竞赛结果
+          - type: input
+            prop: competitionLogDetail
+            label: 学科竞赛详情
+      #创新项目管理init
+      - name: InnovationInit
+        url: experience/innovation/init
+        field: studentId
+        type: table
+        title: 创新项目管理-选择创新项目
+        addPage: InnovationEdit
+        item:
+          - type: text
+            prop: innovationName
+            label: 创新项目名
+          - type: date
+            prop: innovationDate
+            label: 创新项目日期
+          - type: text
+            prop: innovationDetail
+            label: 创新项目详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: InnovationEdit
+              - name: delete
+                label: 删除
+                url: experience/innovation/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入创新项目名
+            field:
+              - innovationName
+            url: experience/innovation/query
+      #创新项目管理edit
+      - name: InnovationEdit
+        url: experience/innovation/editInit
+        type: form
+        title: 创新项目信息
+        submitUrl: experience/innovation/editSubmit
+        item:
+          - type: input
+            prop: innovationName
+            label: 创新项目名
+          - type: date
+            prop: innovationDate
+            label: 创新项目日期
+          - type: input
+            prop: innovationDetail
+            label: 创新项目详情
+      #培训讲座管理init
+      - name: LectureLogInit
+        url: experience/lectureLog/init
+        field: studentId
+        type: table
+        title: 培训讲座管理-选择培训讲座
+        addPage: LectureLogEdit
+        item:
+          - type: text
+            prop: lectureNum
+            label: 培训讲座编号
+          - type: text
+            prop: lectureName
+            label: 培训讲座名
+          - type: date
+            prop: lectureDate
+            label: 培训讲座日期
+          - type: text
+            prop: lectureLogDetail
+            label: 培训讲座详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: LectureLogEdit
+              - name: delete
+                label: 删除
+                url: experience/lectureLog/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入培训讲座编号或培训讲座名
+            field:
+              - lectureNum
+              - lectureName
+            url: experience/lectureLog/query
+      #培训讲座管理edit
+      - name: LectureLogEdit
+        url: experience/lectureLog/editInit
+        type: form
+        title: 培训讲座信息
+        submitUrl: experience/lectureLog/editSubmit
+        item:
+          - type: dynamicSelect
+            prop: lectureId
+            label: 培训讲座名
+            table: Lecture
+            optionLabel: lectureName
+          - type: input
+            prop: lectureLogDetail
+            label: 培训讲座详情
+      #校外实习管理init
+      - name: PracticeInit
+        url: experience/practice/init
+        field: studentId
+        type: table
+        title: 校外实习管理-选择校外实习
+        addPage: PracticeEdit
+        item:
+          - type: text
+            prop: practiceName
+            label: 校外实习名
+          - type: date
+            prop: practiceDate
+            label: 校外实习日期
+          - type: text
+            prop: practicePlace
+            label: 校外实习地点
+          - type: text
+            prop: practiceDetail
+            label: 校外实习详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: PracticeEdit
+              - name: delete
+                label: 删除
+                url: experience/practice/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入校外实习名
+            field:
+              - practiceName
+            url: experience/practice/query
+      #校外实习管理edit
+      - name: PracticeEdit
+        url: experience/practice/editInit
+        type: form
+        title: 校外实习信息
+        submitUrl: experience/practice/editSubmit
+        item:
+          - type: input
+            prop: practiceName
+            label: 校外实习名
+          - type: date
+            prop: practiceDate
+            label: 校外实习日期
+          - type: input
+            prop: practicePlace
+            label: 校外实习地点
+          - type: input
+            prop: practiceDetail
+            label: 校外实习详情
+      #荣誉信息管理init
+      - name: HonorInit
+        url: glory/honor/init
+        field: studentId
+        type: table
+        title: 荣誉信息管理-选择荣誉信息
+        addPage: HonorEdit
+        item:
+          - type: text
+            prop: honorName
+            label: 荣誉信息名
+          - type: text
+            prop: honorCategoryName
+            label: 荣誉信息类型
+          - type: text
+            prop: honorDegree
+            label: 荣誉等级
+          - type: date
+            prop: honorDate
+            label: 荣誉信息日期
+          - type: text
+            prop: honorDetail
+            label: 荣誉信息详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: HonorEdit
+              - name: delete
+                label: 删除
+                url: glory/honor/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入荣誉信息名或荣誉类型
+            field:
+              - honorName
+              - honorCategoryName
+            url: glory/honor/query
+      #荣誉信息管理edit
+      - name: HonorEdit
+        url: glory/honor/editInit
+        type: form
+        title: 荣誉信息信息
+        submitUrl: glory/honor/editSubmit
+        item:
+          - type: input
+            prop: honorName
+            label: 荣誉信息名
+          - type: dynamicSelect
+            prop: honorCategoryId
+            label: 荣誉信息类型
+            table: HonorCategory
+            optionLabel: honorCategoryName
+          - type: select
+            prop: honorDegree
+            label: 荣誉等级
+            option:
+              - value: 校级
+                label: 校级
+              - value: 省级
+                label: 省级
+              - value: 国家级
+                label: 国家级
+          - type: date
+            prop: honorDate
+            label: 荣誉信息日期
+          - type: input
+            prop: honorDetail
+            label: 荣誉信息详情
+      #日常活动管理init
+      - name: ActivityInit
+        url: day/activity/init
+        field: studentId
+        type: table
+        title: 日常活动管理-选择日常活动
+        addPage: ActivityEdit
+        item:
+          - type: text
+            prop: activityName
+            label: 日常活动名
+          - type: text
+            prop: activityCategoryName
+            label: 日常活动类型
+          - type: date
+            prop: activityDate
+            label: 日常活动日期
+          - type: text
+            prop: activityPlace
+            label: 日常活动地点
+          - type: text
+            prop: activityDetail
+            label: 日常活动详情
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: ActivityEdit
+              - name: delete
+                label: 删除
+                url: day/activity/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入日常活动名或荣誉类型
+            field:
+              - activityName
+              - activityCategoryName
+            url: day/activity/query
+      #日常活动管理edit
+      - name: ActivityEdit
+        url: day/activity/editInit
+        type: form
+        title: 日常活动信息
+        submitUrl: day/activity/editSubmit
+        item:
+          - type: input
+            prop: activityName
+            label: 日常活动名
+          - type: dynamicSelect
+            prop: activityCategoryId
+            label: 日常活动类型
+            table: ActivityCategory
+            optionLabel: activityCategoryName
+          - type: input
+            prop: activityPlace
+            label: 日常活动地点
+          - type: date
+            prop: activityDate
+            label: 日常活动日期
+          - type: input
+            prop: activityDetail
+            label: 日常活动详情
+      #请假信息管理init
+      - name: LeaveInit
+        url: day/leave/init
+        field: studentId
+        type: table
+        title: 请假信息管理-选择请假信息
+        addPage: LeaveEdit
+        item:
+          - type: text
+            prop: leaveName
+            label: 请假信息名
+          - type: text
+            prop: leaveCategoryName
+            label: 请假信息类型
+          - type: date
+            prop: leaveDate
+            label: 请假信息日期
+          - type: text
+            prop: leaveDetail
+            label: 请假信息详情
+          - type: text
+            prop: certifier
+            label: 证明人
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: LeaveEdit
+              - name: delete
+                label: 删除
+                url: day/leave/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入请假信息名或荣誉类型
+            field:
+              - leaveName
+              - leaveCategoryName
+            url: day/leave/query
+      #请假信息管理edit
+      - name: LeaveEdit
+        url: day/leave/editInit
+        type: form
+        title: 请假信息信息
+        submitUrl: day/leave/editSubmit
+        item:
+          - type: input
+            prop: leaveName
+            label: 请假信息名
+          - type: dynamicSelect
+            prop: leaveCategoryId
+            label: 请假信息类型
+            table: LeaveCategory
+            optionLabel: leaveCategoryName
+          - type: date
+            prop: leaveDate
+            label: 请假信息日期
+          - type: input
+            prop: leaveDetail
+            label: 请假信息详情
+          - type: input
+            prop: certifier
+            label: 证明人
+      #消费日志管理init
+      - name: ConsumeInit
+        url: day/consume/init
+        field: studentId
+        type: table
+        title: 消费日志管理-选择消费日志
+        addPage: ConsumeEdit
+        calc:
+          - label: 总金额
+            type: sum
+            prop: consumeAmount
+        item:
+          - type: text
+            prop: consumeName
+            label: 消费日志名
+          - type: text
+            prop: consumeCategoryName
+            label: 消费日志类型
+          - type: date
+            prop: consumeDate
+            label: 消费日志日期
+          - type: text
+            prop: consumeDetail
+            label: 消费日志详情
+          - type: text
+            prop: consumeAmount
+            label: 消费金额
+          - type: opers
+            label: 操作
+            opers:
+              - name: edit
+                label: 编辑
+                page: ConsumeEdit
+              - name: delete
+                label: 删除
+                url: day/consume/delete
+        query:
+          - type: input
+            prop: keyword
+            label: 请输入消费日志名或荣誉类型
+            field:
+              - consumeName
+              - consumeCategoryName
+            url: day/consume/query
+      #消费日志管理edit
+      - name: ConsumeEdit
+        url: day/consume/editInit
+        type: form
+        title: 消费日志信息
+        submitUrl: day/consume/editSubmit
+        item:
+          - type: input
+            prop: consumeName
+            label: 消费日志名
+          - type: dynamicSelect
+            prop: consumeCategoryId
+            label: 消费日志类型
+            table: ConsumeCategory
+            optionLabel: consumeCategoryName
+          - type: date
+            prop: consumeDate
+            label: 消费日志日期
+          - type: input
+            prop: consumeDetail
+            label: 消费日志详情
+          - type: input
+            prop: consumeAmount
+            label: 消费金额

@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>E:/DATA/Project/Javawork1/java-server/src/main/java</OriginalElement>
+  <nodes>
+    <node x="660.0" y="2507.0">org.fatmansoft.teach.payload.request.LoginRequest</node>
+    <node x="9850.5" y="762.5">org.fatmansoft.teach.repository.day.consume.ConsumeCategoryRepository</node>
+    <node x="6130.0" y="1923.0">org.fatmansoft.teach.models.experience.lecture.LectureLog</node>
+    <node x="5547.0" y="1487.5">org.fatmansoft.teach.service.experience.lecture.LectureService</node>
+    <node x="5912.0" y="1487.5">org.fatmansoft.teach.service.day.leave.LeaveService</node>
+    <node x="4156.5" y="762.5">org.fatmansoft.teach.repository.experience.achievement.AchievementRepository</node>
+    <node x="4654.0" y="1923.0">org.fatmansoft.teach.payload.request.DataRequest</node>
+    <node x="6373.0" y="1923.0">org.fatmansoft.teach.models.information.Student</node>
+    <node x="5912.5" y="762.5">org.fatmansoft.teach.repository.experience.community.CommunityCategoryRepository</node>
+    <node x="0.0" y="1923.0">org.fatmansoft.teach.util.CommonMethod</node>
+    <node x="4402.5" y="762.5">org.fatmansoft.teach.repository.experience.competition.CompetitionRepository</node>
+    <node x="3617.0" y="2507.0">org.fatmansoft.teach.models.base.EUserType</node>
+    <node x="2076.0" y="1487.5">org.fatmansoft.teach.service.experience.achievement.AchievementService</node>
+    <node x="1827.0" y="1923.0">org.fatmansoft.teach.models.experience.community.Community</node>
+    <node x="458.0" y="1487.5">org.fatmansoft.teach.service.day.activity.ActivityService</node>
+    <node x="6313.0" y="1418.0">org.fatmansoft.teach.controllers.base.ReadonlyCommonController</node>
+    <node x="2297.0" y="1487.5">org.fatmansoft.teach.service.experience.competition.CompetitionLogService</node>
+    <node x="10521.791666666659" y="1418.0">org.fatmansoft.teach.controllers.base.CommonController</node>
+    <node x="9140.25" y="1812.0">org.fatmansoft.teach.controllers.experience.innovation.InnovationController</node>
+    <node x="11700.0" y="1923.0">org.fatmansoft.teach.util.Base64ImgReplacedElementFactory</node>
+    <node x="617.0" y="1923.0">org.fatmansoft.teach.sqlite.SQLDialect</node>
+    <node x="3862.0" y="2507.0">org.fatmansoft.teach.security.jwt.AuthEntryPointJwt</node>
+    <node x="5640.5" y="762.5">org.fatmansoft.teach.repository.day.activity.ActivityCategoryRepository</node>
+    <node x="8406.25" y="1812.0">org.fatmansoft.teach.controllers.study.material.MaterialController</node>
+    <node x="1428.0" y="1923.0">org.fatmansoft.teach.controllers.test.TestController</node>
+    <node x="10816.0" y="1923.0">org.fatmansoft.teach.repository.support.CommonRepositoryFactoryBean</node>
+    <node x="12191.25" y="1800.0">org.fatmansoft.teach.controllers.study.course.CourseLogController</node>
+    <node x="10617.25" y="1812.0">org.fatmansoft.teach.controllers.experience.practice.PracticeController</node>
+    <node x="403.0" y="2507.0">org.fatmansoft.teach.payload.response.DataResponse</node>
+    <node x="2158.0" y="1923.0">org.fatmansoft.teach.models.day.consume.Consume</node>
+    <node x="3288.5" y="0.0">org.fatmansoft.teach.repository.base.CommonRepository</node>
+    <node x="10236.0" y="1923.0">org.fatmansoft.teach.models.day.leave.LeaveCategory</node>
+    <node x="4908.0" y="1923.0">org.fatmansoft.teach.models.experience.achievement.Achievement</node>
+    <node x="7315.5" y="762.5">org.fatmansoft.teach.repository.day.leave.LeaveCategoryRepository</node>
+    <node x="9642.5" y="762.5">org.fatmansoft.teach.repository.information.StudentRepository</node>
+    <node x="6492.25" y="1812.0">org.fatmansoft.teach.controllers.study.check.CheckLogController</node>
+    <node x="2141.0" y="2507.0">org.fatmansoft.teach.sqlite.SQLiteIdentityColumnSupport</node>
+    <node x="10821.25" y="1812.0">org.fatmansoft.teach.controllers.experience.achievement.AchievementController</node>
+    <node x="7831.0" y="1923.0">org.fatmansoft.teach.models.study.score.ScoreLog</node>
+    <node x="0.0" y="1279.0">org.fatmansoft.teach.service.base.CommonService.Node</node>
+    <node x="4088.0" y="1487.5">org.fatmansoft.teach.service.experience.community.CommunityService</node>
+    <node x="6871.5" y="762.5">org.fatmansoft.teach.repository.information.StudentInfRepository</node>
+    <node x="6616.0" y="1923.0">org.fatmansoft.teach.models.experience.competition.Competition</node>
+    <node x="2765.0" y="1923.0">org.fatmansoft.teach.models.day.activity.Activity</node>
+    <node x="8905.0" y="1923.0">org.fatmansoft.teach.models.experience.community.CommunityCategory</node>
+    <node x="1185.0" y="1923.0">org.fatmansoft.teach.models.base.User</node>
+    <node x="3895.0" y="1923.0">org.fatmansoft.teach.security.services.UserDetailsImpl</node>
+    <node x="4439.0" y="2507.0">org.fatmansoft.teach.controllers.introduce.IntroduceController</node>
+    <node x="3396.0" y="1487.5">org.fatmansoft.teach.service.glory.honor.HonorCategoryService</node>
+    <node x="4297.0" y="1487.5">org.fatmansoft.teach.service.experience.community.CommunityCategoryService</node>
+    <node x="7574.5" y="726.5">org.fatmansoft.teach.repository.base.UserRepository</node>
+    <node x="8074.0" y="1923.0">org.fatmansoft.teach.models.study.course.CourseLog</node>
+    <node x="3322.0" y="1923.0">org.fatmansoft.teach.models.day.leave.Leave</node>
+    <node x="5727.0" y="1487.5">org.fatmansoft.teach.service.study.material.MaterialService</node>
+    <node x="1443.0" y="2507.0">org.fatmansoft.teach.util.ClassUtil</node>
+    <node x="9724.0" y="1923.0">org.fatmansoft.teach.models.day.activity.ActivityCategory</node>
+    <node x="6859.0" y="1923.0">org.fatmansoft.teach.models.study.homework.Homework</node>
+    <node x="2781.5" y="553.0">org.fatmansoft.teach.repository.support.CommonRepositoryImpl</node>
+    <node x="2844.0" y="2507.0">org.fatmansoft.teach.payload.response.MessageResponse</node>
+    <node x="4944.0" y="1487.5">org.fatmansoft.teach.service.study.check.CheckLogService</node>
+    <node x="1875.0" y="1487.5">org.fatmansoft.teach.service.information.StudentInfService</node>
+    <node x="6463.0" y="2507.0">org.fatmansoft.teach.service.base.SystemService</node>
+    <node x="930.0" y="1487.5">org.fatmansoft.teach.service.study.homework.HomeworkService</node>
+    <node x="1136.0" y="1487.5">org.fatmansoft.teach.service.day.activity.ActivityCategoryService</node>
+    <node x="7405.25" y="1812.0">org.fatmansoft.teach.controllers.day.leave.LeaveCategoryController</node>
+    <node x="6181.25" y="1800.0">org.fatmansoft.teach.controllers.study.score.ScoreLogController</node>
+    <node x="5554.0" y="2507.0">org.fatmansoft.teach.config.SpringHttpSessionConfig</node>
+    <node x="7881.5" y="762.5">org.fatmansoft.teach.repository.study.course.CourseRepository</node>
+    <node x="9187.0" y="1923.0">org.fatmansoft.teach.models.day.consume.ConsumeCategory</node>
+    <node x="5207.0" y="2507.0">org.fatmansoft.teach.SpringBootSecurityJwtApplication</node>
+    <node x="5141.0" y="1487.5">org.fatmansoft.teach.service.glory.honor.HonorService</node>
+    <node x="6848.0" y="2507.0">org.fatmansoft.teach.repository.base.UserTypeRepository</node>
+    <node x="858.0" y="2507.0">org.fatmansoft.teach.util.UimsUtil</node>
+    <node x="374.0" y="1923.0">org.fatmansoft.teach.models.information.StudentInf</node>
+    <node x="0.0" y="2507.0">org.fatmansoft.teach.security.WebSecurityConfig</node>
+    <node x="11470.25" y="1812.0">org.fatmansoft.teach.controllers.day.leave.LeaveController</node>
+    <node x="9432.5" y="762.5">org.fatmansoft.teach.repository.study.material.MaterialRepository</node>
+    <node x="7102.0" y="1923.0">org.fatmansoft.teach.models.experience.lecture.Lecture</node>
+    <node x="7660.25" y="1812.0">org.fatmansoft.teach.controllers.day.consume.ConsumeCategoryController</node>
+    <node x="7941.25" y="1812.0">org.fatmansoft.teach.controllers.experience.competition.CompetitionController</node>
+    <node x="4875.5" y="762.5">org.fatmansoft.teach.repository.study.material.MaterialCategoryRepository</node>
+    <node x="5899.0" y="2507.0">org.fatmansoft.teach.security.services.UserDetailsServiceImpl</node>
+    <node x="9982.0" y="1923.0">org.fatmansoft.teach.models.glory.honor.HonorCategory</node>
+    <node x="9564.25" y="1812.0">org.fatmansoft.teach.controllers.experience.community.CommunityController</node>
+    <node x="3316.5" y="334.0">org.fatmansoft.teach.service.base.CommonService</node>
+    <node x="3714.5" y="762.5">org.fatmansoft.teach.repository.experience.practice.PracticeRepository</node>
+    <node x="3635.0" y="1487.5">org.fatmansoft.teach.service.day.consume.ConsumeService</node>
+    <node x="1050.0" y="2507.0">org.fatmansoft.teach.controllers.base.AuthController</node>
+    <node x="8317.0" y="1923.0">org.fatmansoft.teach.models.base.UserType</node>
+    <node x="6079.0" y="1487.5">org.fatmansoft.teach.service.study.homework.HomeworkLogService</node>
+    <node x="7141.0" y="2507.0">org.fatmansoft.teach.service.test.TestServ</node>
+    <node x="11277.25" y="1812.0">org.fatmansoft.teach.controllers.glory.honor.HonorController</node>
+    <node x="8872.25" y="1812.0">org.fatmansoft.teach.controllers.day.activity.ActivityCategoryController</node>
+    <node x="6213.5" y="762.5">org.fatmansoft.teach.repository.experience.lecture.LectureLogRepository</node>
+    <node x="9162.5" y="762.5">org.fatmansoft.teach.repository.experience.competition.CompetitionLogRepository</node>
+    <node x="4573.0" y="1487.5">org.fatmansoft.teach.service.study.course.CourseService</node>
+    <node x="10289.25" y="1800.0">org.fatmansoft.teach.controllers.information.StudentController</node>
+    <node x="10728.0" y="2051.0">org.fatmansoft.teach.repository.support.CommonRepositoryFactoryBean.CommonRepositoryFactory</node>
+    <node x="6230.0" y="2507.0">org.fatmansoft.teach.service.introduce.IntroduceService</node>
+    <node x="2542.0" y="1487.5">org.fatmansoft.teach.service.experience.competition.CompetitionService</node>
+    <node x="9363.25" y="1812.0">org.fatmansoft.teach.controllers.day.activity.ActivityController</node>
+    <node x="8082.5" y="762.5">org.fatmansoft.teach.repository.study.check.CheckLogRepository</node>
+    <node x="8701.5" y="762.5">org.fatmansoft.teach.repository.glory.honor.HonorRepository</node>
+    <node x="7301.0" y="2507.0">org.fatmansoft.teach.repository.test.TestRepository</node>
+    <node x="8560.0" y="1923.0">org.fatmansoft.teach.payload.response.JwtResponse</node>
+    <node x="7780.5" y="1418.0">org.fatmansoft.teach.controllers.base.AdminCommonController</node>
+    <node x="4834.0" y="2507.0">org.fatmansoft.teach.SystemApplicationListener</node>
+    <node x="9794.25" y="1812.0">org.fatmansoft.teach.controllers.experience.competition.CompetitionLogController</node>
+    <node x="8179.25" y="1812.0">org.fatmansoft.teach.controllers.study.homework.HomeworkController</node>
+    <node x="2961.0" y="1487.5">org.fatmansoft.teach.service.study.material.MaterialCategoryService</node>
+    <node x="2759.0" y="1487.5">org.fatmansoft.teach.service.experience.innovation.InnovationService</node>
+    <node x="6667.0" y="2507.0">org.fatmansoft.teach.service.test.TestService</node>
+    <node x="7208.25" y="1812.0">org.fatmansoft.teach.controllers.study.course.CourseController</node>
+    <node x="4397.0" y="1923.0">org.fatmansoft.teach.models.experience.competition.CompetitionLog</node>
+    <node x="3093.0" y="2507.0">org.fatmansoft.teach.security.jwt.AuthTokenFilter</node>
+    <node x="8612.25" y="1812.0">org.fatmansoft.teach.controllers.glory.honor.HonorCategoryController</node>
+    <node x="11063.25" y="1812.0">org.fatmansoft.teach.controllers.day.consume.ConsumeController</node>
+    <node x="3828.0" y="1487.5">org.fatmansoft.teach.service.day.consume.ConsumeCategoryService</node>
+    <node x="638.0" y="1475.5">org.fatmansoft.teach.service.information.StudentService</node>
+    <node x="5313.0" y="1487.5">org.fatmansoft.teach.service.day.leave.LeaveCategoryService</node>
+    <node x="5151.0" y="1923.0">org.fatmansoft.teach.models.experience.innovation.Innovation</node>
+    <node x="5880.0" y="1923.0">org.fatmansoft.teach.models.study.homework.HomeworkLog</node>
+    <node x="10135.5" y="762.5">org.fatmansoft.teach.repository.experience.innovation.InnovationRepository</node>
+    <node x="8898.5" y="762.5">org.fatmansoft.teach.repository.glory.honor.HonorCategoryRepository</node>
+    <node x="7345.0" y="1923.0">org.fatmansoft.teach.models.study.check.CheckLog</node>
+    <node x="6446.5" y="762.5">org.fatmansoft.teach.repository.experience.lecture.LectureRepository</node>
+    <node x="7097.5" y="762.5">org.fatmansoft.teach.repository.day.consume.ConsumeRepository</node>
+    <node x="6911.25" y="1812.0">org.fatmansoft.teach.controllers.experience.community.CommunityCategoryController</node>
+    <node x="7588.0" y="1923.0">org.fatmansoft.teach.payload.request.SignupRequest</node>
+    <node x="5394.0" y="1923.0">org.fatmansoft.teach.models.study.course.Course</node>
+    <node x="8509.5" y="762.5">org.fatmansoft.teach.repository.day.leave.LeaveRepository</node>
+    <node x="3922.5" y="762.5">org.fatmansoft.teach.repository.experience.community.CommunityRepository</node>
+    <node x="11658.25" y="1800.0">org.fatmansoft.teach.controllers.information.StudentInfController</node>
+    <node x="3588.0" y="1923.0">org.fatmansoft.teach.util.DateTimeTool</node>
+    <node x="5637.0" y="1923.0">org.fatmansoft.teach.models.experience.practice.Practice</node>
+    <node x="8304.5" y="762.5">org.fatmansoft.teach.repository.day.activity.ActivityRepository</node>
+    <node x="1383.0" y="1487.5">org.fatmansoft.teach.service.experience.lecture.LectureLogService</node>
+    <node x="4749.0" y="1487.5">org.fatmansoft.teach.service.study.score.ScoreLogService</node>
+    <node x="11386.0" y="1923.0">org.fatmansoft.teach.util.SpringUtil</node>
+    <node x="4644.5" y="762.5">org.fatmansoft.teach.repository.study.homework.HomeworkRepository</node>
+    <node x="10060.25" y="1812.0">org.fatmansoft.teach.controllers.experience.lecture.LectureLogController</node>
+    <node x="6710.25" y="1812.0">org.fatmansoft.teach.controllers.experience.lecture.LectureController</node>
+    <node x="10485.0" y="1923.0">org.fatmansoft.teach.util.Pair</node>
+    <node x="1591.0" y="1475.5">org.fatmansoft.teach.service.study.course.CourseLogService</node>
+    <node x="6651.5" y="762.5">org.fatmansoft.teach.repository.study.score.ScoreLogRepository</node>
+    <node x="3047.0" y="1923.0">org.fatmansoft.teach.models.glory.honor.Honor</node>
+    <node x="11936.25" y="1812.0">org.fatmansoft.teach.controllers.study.homework.HomeworkLogController</node>
+    <node x="2467.0" y="1923.0">org.fatmansoft.teach.models.study.material.Material</node>
+    <node x="1830.0" y="2507.0">org.fatmansoft.teach.util.StringUtil</node>
+    <node x="3213.0" y="1487.5">org.fatmansoft.teach.service.experience.practice.PracticeService</node>
+    <node x="2506.0" y="2507.0">org.fatmansoft.teach.security.jwt.JwtUtils</node>
+    <node x="5381.5" y="762.5">org.fatmansoft.teach.repository.study.homework.HomeworkLogRepository</node>
+    <node x="5152.5" y="762.5">org.fatmansoft.teach.repository.study.course.CourseLogRepository</node>
+    <node x="9458.0" y="1923.0">org.fatmansoft.teach.models.study.material.MaterialCategory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.fatmansoft.teach.controllers.base.AdminCommonController" target="org.fatmansoft.teach.service.base.CommonService" relationship="DEPENDENCY">
+      <point x="0.0" y="-96.5" />
+      <point x="7920.5" y="1249.0" />
+      <point x="3631.5" y="1249.0" />
+      <point x="126.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.experience.achievement.AchievementController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="10932.25" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.information.StudentRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="9736.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.glory.honor.HonorCategoryController" target="org.fatmansoft.teach.controllers.base.AdminCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="8732.25" y="1775.0" />
+      <point x="7920.5" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.study.score.ScoreLogRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="6751.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.day.leave.LeaveRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="8595.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.day.activity.ActivityController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="9453.75" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.base.ReadonlyCommonController" target="org.fatmansoft.teach.service.base.CommonService" relationship="DEPENDENCY">
+      <point x="0.0" y="-96.5" />
+      <point x="6459.0" y="1259.0" />
+      <point x="7920.5" y="1259.0" />
+      <point x="7920.5" y="1249.0" />
+      <point x="3631.5" y="1249.0" />
+      <point x="126.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.study.homework.HomeworkLogRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="5501.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.information.StudentController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="10443.25" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.experience.community.CommunityCategoryController" target="org.fatmansoft.teach.controllers.base.AdminCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="7049.75" y="1775.0" />
+      <point x="7920.5" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.study.course.CourseRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="7972.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.day.activity.ActivityService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="538.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.base.CommonService" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="DEPENDENCY">
+      <point x="0.0" y="-442.5" />
+      <point x="0.0" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.day.leave.LeaveCategoryService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="5420.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.study.homework.HomeworkRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="4750.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.experience.competition.CompetitionLogService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="2409.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.experience.competition.CompetitionLogController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="9917.25" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.support.CommonRepositoryImpl" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="REALIZATION">
+      <point x="0.0" y="-223.5" />
+      <point x="3039.0" y="314.0" />
+      <point x="3360.8333333333335" y="314.0" />
+      <point x="-144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.study.homework.HomeworkService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="1023.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.day.consume.ConsumeCategoryController" target="org.fatmansoft.teach.controllers.base.AdminCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="7790.75" y="1775.0" />
+      <point x="7920.5" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.base.CommonService.Node" target="org.fatmansoft.teach.service.base.CommonService" relationship="INNER_CLASS">
+      <point x="0.0" y="-235.5" />
+      <point x="219.0" y="1249.0" />
+      <point x="3379.5" y="1249.0" />
+      <point x="-126.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.glory.honor.HonorController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="11363.75" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.day.consume.ConsumeRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="7196.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.study.course.CourseLogController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="12320.25" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.support.CommonRepositoryFactoryBean.CommonRepositoryFactory" target="org.fatmansoft.teach.repository.support.CommonRepositoryFactoryBean" relationship="INNER_CLASS">
+      <point x="0.0" y="-50.5" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.study.material.MaterialService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="5809.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.day.leave.LeaveService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="5985.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.glory.honor.HonorService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="5217.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.experience.practice.PracticeRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="3808.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.day.consume.ConsumeCategoryRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="9983.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.day.consume.ConsumeService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="3721.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.experience.community.CommunityRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="4.547473508864641E-13" y="-14.0" />
+      <point x="4029.5000000000005" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.experience.achievement.AchievementService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="2176.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.study.homework.HomeworkController" target="org.fatmansoft.teach.controllers.base.AdminCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="8282.75" y="1775.0" />
+      <point x="7920.5" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.experience.lecture.LectureRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="6539.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.day.activity.ActivityRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="8397.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.study.material.MaterialController" target="org.fatmansoft.teach.controllers.base.AdminCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="8499.25" y="1775.0" />
+      <point x="7920.5" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.experience.innovation.InnovationRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="10239.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.experience.practice.PracticeService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.experience.achievement.AchievementRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="4269.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.study.course.CourseLogService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="1723.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.study.course.CourseController" target="org.fatmansoft.teach.controllers.base.AdminCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="7296.75" y="1775.0" />
+      <point x="7920.5" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.experience.competition.CompetitionRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="4513.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.study.material.MaterialCategoryRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="5004.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.base.CommonController" target="org.fatmansoft.teach.service.base.CommonService" relationship="DEPENDENCY">
+      <point x="0.0" y="-96.5" />
+      <point x="10661.791666666659" y="1259.0" />
+      <point x="7920.5" y="1259.0" />
+      <point x="7920.5" y="1249.0" />
+      <point x="3631.5" y="1249.0" />
+      <point x="126.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.study.course.CourseLogRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="5257.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.experience.lecture.LectureLogService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="1477.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.study.score.ScoreLogService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="4836.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.study.homework.HomeworkLogService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="6186.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.glory.honor.HonorRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="8790.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.experience.community.CommunityCategoryService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="4425.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.experience.practice.PracticeController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="10709.25" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.study.check.CheckLogRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="8183.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.experience.lecture.LectureLogRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="6320.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.experience.innovation.InnovationController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="9241.75" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.information.StudentInfService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="1965.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.experience.lecture.LectureLogController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="10164.75" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.study.check.CheckLogService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="5032.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.experience.lecture.LectureController" target="org.fatmansoft.teach.controllers.base.AdminCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="6800.75" y="1775.0" />
+      <point x="7920.5" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.study.material.MaterialRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="9527.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.day.activity.ActivityCategoryService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="1249.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.experience.community.CommunityCategoryRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="6053.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.experience.competition.CompetitionLogRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="9287.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.study.material.MaterialCategoryService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="3077.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.experience.community.CommunityController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="9669.25" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.day.leave.LeaveCategoryController" target="org.fatmansoft.teach.controllers.base.AdminCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="7522.75" y="1775.0" />
+      <point x="7920.5" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.experience.competition.CompetitionController" target="org.fatmansoft.teach.controllers.base.AdminCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="8050.25" y="1775.0" />
+      <point x="7920.5" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.study.homework.HomeworkLogController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="12053.75" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.day.leave.LeaveCategoryRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="7435.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.day.consume.ConsumeController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="11160.25" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.information.StudentInfRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="6974.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.glory.honor.HonorCategoryRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="9020.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.experience.lecture.LectureService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="5627.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.experience.community.CommunityService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="4182.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.information.StudentService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="774.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.study.score.ScoreLogController" target="org.fatmansoft.teach.controllers.base.ReadonlyCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="6326.75" y="1775.0" />
+      <point x="6459.0" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.day.leave.LeaveController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="11554.25" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.base.UserRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-50.0" />
+      <point x="7718.0" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.repository.day.activity.ActivityCategoryRepository" target="org.fatmansoft.teach.repository.base.CommonRepository" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="5766.5" y="314.0" />
+      <point x="7085.5" y="314.0" />
+      <point x="7085.5" y="304.0" />
+      <point x="3650.1666666666665" y="304.0" />
+      <point x="144.66666666666652" y="142.0" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.day.consume.ConsumeCategoryService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="3948.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.study.check.CheckLogController" target="org.fatmansoft.teach.controllers.base.ReadonlyCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="6591.25" y="1775.0" />
+      <point x="6459.0" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.day.activity.ActivityCategoryController" target="org.fatmansoft.teach.controllers.base.AdminCommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="8996.25" y="1775.0" />
+      <point x="7920.5" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.experience.competition.CompetitionService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="2640.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.experience.innovation.InnovationService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="2850.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.glory.honor.HonorCategoryService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="3505.5" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.service.study.course.CourseService" target="org.fatmansoft.teach.service.base.CommonService" relationship="GENERALIZATION">
+      <point x="0.0" y="-27.0" />
+      <point x="4651.0" y="1259.0" />
+      <point x="3293.5765398550625" y="1259.0" />
+      <point x="3293.5765398550625" y="1239.0" />
+      <point x="3505.5" y="1239.0" />
+      <point x="0.0" y="442.5" />
+    </edge>
+    <edge source="org.fatmansoft.teach.controllers.information.StudentInfController" target="org.fatmansoft.teach.controllers.base.CommonController" relationship="GENERALIZATION">
+      <point x="0.0" y="-39.0" />
+      <point x="11787.25" y="1775.0" />
+      <point x="10661.791666666659" y="1775.0" />
+      <point x="0.0" y="96.5" />
+    </edge>
+  </edges>
+  <settings layout="分层" zoom="0.8721331194867682" showDependencies="false" x="5025.432639223929" y="1941.234835121776" />
+  <SelectedNodes />
+  <Categories>
+    <Category>内部类</Category>
+    <Category>字段</Category>
+    <Category>属性</Category>
+    <Category>方法</Category>
+    <Category>构造函数</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
